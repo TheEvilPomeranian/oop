@@ -1,0 +1,185 @@
+#include <iostream>
+using namespace std;    
+
+
+/*struct employee{
+	int number;
+	float stipend;
+};
+
+int main() {
+	setlocale(LC_ALL, "ru");
+	int n;
+	employee emp[3];
+	for (int i = 0; i < 3; i++) {
+		cout << "Введите номер сотрудника:  "; cin >> emp[i].number;
+		cout << "Введите сумму пособия: "; cin >> emp[i].stipend;
+	}
+	for (int i = 0; i < 3; i++) {
+		cout << "Работник под номером " << emp[i].number << " получается пособие суммой " << emp[i].stipend << endl;
+	}
+}*/
+
+/*struct date {
+	int month;
+	int day;
+	int year;
+};
+int main() {
+	setlocale(LC_ALL, "ru");
+	char s = '/';
+	date d;
+	cout << "Введите дату день/месяц/год: "; cin >> d.day >> s >> d.month >> s >> d.year;
+	cout << "Ваша дата: " << d.day << s << d.month << s << d.year << endl;
+}*/
+
+/*enum etype {
+	laborer, secretary, manager, accountant, executive, researcher
+};
+
+int main() {
+	setlocale(LC_ALL, "ru");
+	char p;
+	etype post;
+	cout << "Введите первую букву должности (laborer, secretary, manager, accountant, executive, researcher): "; cin >> p;
+	switch (p) {
+	case 'l':
+		post = laborer;
+		break;
+	case 's':
+		post = secretary;
+		break;
+	case 'm':
+		post = manager;
+		break;
+	case 'a':
+		post = accountant;
+		break; 
+	case 'e':
+		post = executive;
+		break; 
+	case 'r':
+		post = researcher;
+		break;
+	}
+	switch (post) {
+	case laborer:
+		cout << "Полное название должности: laborer" << endl;
+		break;
+	case secretary:
+		cout << "Полное название должности: secretary" << endl;
+		break;
+	case manager:
+		cout << "Полное название должности: manager" << endl;
+		break;
+	case accountant:
+		cout << "Полное название должности: accountant" << endl;
+		break;
+	case executive:
+		cout << "Полное название должности: executive" << endl;
+		break;
+	case researcher:
+		cout << "Полное название должности: researcher" << endl;
+		break;
+	}
+}*/
+
+/*struct employee {
+	int number, month, day, year;
+	float stipend;
+	enum etype {
+		laborer, secretary, manager, accountant, executive, researcher
+	};
+	etype post;
+	char p;
+};
+
+int main() {
+	setlocale(LC_ALL, "ru");
+	int n;
+	char s = '/';
+	employee emp[3];
+	employee d;
+	for (int i = 0; i < 3; i++) {
+		cout << "Введите номер сотрудника:  "; cin >> emp[i].number;
+		cout << "Введите сумму пособия: "; cin >> emp[i].stipend;
+		cout << "Введите первую букву должности (laborer, secretary, manager, accountant, executive, researcher):"; cin >> emp[i].p;
+		cout << "Введите дату принятия на работу день/месяц/год: "; cin >> emp[i].day >> s >> emp[i].month >> s >> emp[i].year;
+		switch (emp[i].p) {
+		case 'l':
+			emp[i].post = emp[i].etype::laborer;
+			break;
+		case 's':
+			emp[i].post = emp[i].etype::secretary;
+			break;
+		case 'm':
+			emp[i].post = emp[i].etype::manager;
+			break;
+		case 'a':
+			emp[i].post = emp[i].etype::accountant;
+			break;
+		case 'e':
+			emp[i].post = emp[i].etype::executive;
+			break;
+		case 'r':
+			emp[i].post = emp[i].etype::researcher;
+			break;
+		}
+	}
+	for (int i = 0; i < 3; i++) {
+		cout << "\nИнформация о работнике под номеров " << emp[i].number << ":" << endl;
+		switch (emp[i].post) {
+		case emp[i].etype::laborer:
+			cout << "Занимаемая должность: laborer" << endl;
+			break;
+		case emp[i].etype::secretary:
+			cout << "Занимаемая должность: secretary"<< endl;
+			break;
+		case emp[i].etype::manager:
+			cout << "Занимаемая должность: manager"<<endl;
+			break;
+		case emp[i].etype::accountant:
+			cout << "Занимаемая должность: accountant"<<endl;
+			break;
+		case emp[i].etype::executive:
+			cout << "Занимаемая должность: executive"<<endl;
+			break;
+		case emp[i].etype::researcher:
+			cout << "Занимаемая должность: researcher"<<endl;
+			break;
+		}
+		cout << "Дата принятия на работу: " << emp[i].day << s << emp[i].month << s << emp[i].year << endl;
+		cout << "Сумма пособия: " << emp[i].stipend << endl;
+	}
+}*/
+
+/*struct fraction {
+	int numerator, denominator;
+};
+int main() {
+	setlocale(LC_ALL, "ru");
+	fraction numb1, numb2;
+	char s = '/', oper, ch;
+	do {
+		cout << "Введите первую дробь: "; cin >> numb1.numerator >> s >> numb1.denominator;
+		cout << "Введите вторую дробь: "; cin >> numb2.numerator >> s >> numb2.denominator;
+		cout << "Выберете действие (+, -, *, /)"; cin >> oper;
+		switch (oper) {
+		case '+':
+			cout << "Сумма равна: " << numb1.numerator * numb2.denominator + numb1.denominator * numb2.numerator << "/" << numb1.denominator * numb2.denominator << endl;
+			break;
+		case '-':
+			cout << "Разность: " << numb1.numerator * numb2.denominator - numb1.denominator * numb2.numerator << "/" << numb1.denominator * numb2.denominator << endl;
+			break;
+		case '*':
+			cout << "Произведение: " << numb1.numerator * numb2.numerator << "/" << numb1.denominator * numb2.denominator << endl;
+			break;
+		case '/':
+			cout << "Деление: " << numb1.numerator * numb2.denominator << "/" << numb1.denominator * numb2.numerator << endl;
+			break;
+		}
+		cout << "Продолжить? ('Да'нажмите y, 'Нет' нажмите n) "; cin >> ch;
+	} while (ch != 'n');
+	
+
+}*/
